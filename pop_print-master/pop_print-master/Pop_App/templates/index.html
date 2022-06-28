@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container-fluid">
+
+    <div class="row bg-light border-bottom">
+        <div class="col p-3">
+            <h1>ALL CATEGORIES</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-around py-5 border-bottom">
+        <a href="category/Comic">
+            <div class="card m-1" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'img/comic.jpeg' %}" alt="Card image cap">
+                <div class="card-body border-top bg-light">
+                    <p class="card-text">Comics</p>
+                </div>
+            </div>
+        </a>
+        <a href="category/Fiction">
+            <div class="card m-1" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'img/fiction.jpeg' %}" alt="Card image cap">
+                <div class="card-body border-top bg-light">
+                    <p class="card-text">Fiction</p>
+                </div>
+            </div>
+        </a>
+        <a href="category/Non-Fiction">
+        <div class="card m-1" style="width: 18rem;">
+            <img class="card-img-top" src="{% static 'img/nonFiction.jpeg' %}" alt="Card image cap">
+            <div class="card-body border-top bg-light">
+                <p class="card-text">Non-Fiction</p>
+            </div>
+        </div>
+        </a>
+        <a href="category/Magazine">
+        <div class="card m-1" style="width: 18rem;">
+            <img class="card-img-top" src="{% static 'img/magazine.jpeg' %}" alt="Card image cap">
+            <div class="card-body border-top bg-light">
+                <p class="card-text">Magazines</p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <div class="row bg-light border-bottom">
+        <div class="col p-3">
+            <h1>LATEST BOOKS</h1>
+        </div>
+
+    </div>
+
+    <div class="row p-4 justify-content-center">
+        {% for item in allP %}
+        <a href="bookDetails/{{item.id}}">
+            <div class="card p-2 m-1" style="width: 10rem;">
+                <img src="{% static 'img/book.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="book-text">${{ item.price }}</p>
+                    <p class="book-text">{{ item.category }}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+
+
+</div>
+
+
+{% endblock %}

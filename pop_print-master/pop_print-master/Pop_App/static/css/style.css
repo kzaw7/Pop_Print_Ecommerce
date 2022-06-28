@@ -1,0 +1,46 @@
+
+.contactTop{
+    color: white;
+    font-size: 0.7rem;
+}
+
+a.navbar-brand, p.card-text, h1{
+    font-size: 1.5rem;
+    font-family: 'Righteous', cursive;
+}
+
+.card-body{
+    font-size: 0.8rem;
+}
+
+.card:hover{
+    box-shadow: 0 0 5px #888;
+
+}
+#wrap{
+    margin: 0px auto;
+    width: 950px;
+    font-family: sans-serif;
+    padding: 25px;
+}
+
+div.userForm{
+    max-width: 600px;
+}
+
+div.formImage{
+    background-color: #e6e7e9;
+}
+
+span.bookInfo{
+    font-size: 1.8rem;
+}
+
+img.productDetails{
+    max-height: 250px
+}
+
+body{
+    max-width: 1200px;
+    margin: auto;
+}
